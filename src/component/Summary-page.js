@@ -8,7 +8,9 @@ const Summary = () => {
     
     return (
         <div className="main-smry">
-           <div className="smry-data">{summary}</div>
+           
+          <div className="smry-data" dangerouslySetInnerHTML={{__html: summary}} />
+          <p>{summary.textContent}</p>
         </div>
     )
 }
